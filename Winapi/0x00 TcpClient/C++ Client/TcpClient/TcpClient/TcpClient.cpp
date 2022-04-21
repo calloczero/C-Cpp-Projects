@@ -17,9 +17,8 @@
 
 int main(int argc, char* argv[]) {
 	int iResult;
-	// load dll to process (initialize winsock)
+	// load dll to process (initialize winsock) and check for error
 	WSADATA wsaData;
-	// check for error
 	if ((iResult = WSAStartup(MAKEWORD(2, 2), &wsaData)) != 0) {
 		std::cerr << "Could not Initialize Winsock" << iResult << std::endl;
 		ExitProcess(EXIT_FAILURE);
