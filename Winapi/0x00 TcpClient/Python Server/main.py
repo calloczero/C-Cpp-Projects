@@ -1,7 +1,7 @@
 from sys import stdout, stderr, argv
-
 import socket
 import os
+
 
 def routine(host: str, port: int) -> None:
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
